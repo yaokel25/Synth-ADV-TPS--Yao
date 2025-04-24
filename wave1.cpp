@@ -10,5 +10,17 @@ const int AMPLITUDE = 127;     // Half of 255 (8-bit R-2RDAC)
 using namespace std;
 int main() {//generate square wave
     ofstream out("square_wave.raw", std::ios::binary);//generate .wave file
+int samples = SAMPLE_RATE * DURATION;
+
+    for (int i = 0; i < samples; i++) {
+        float t = (float)i / SAMPLE_RATE;
+        int value = (sin(2 * M_PI * FREQUENCY * t) > 0) ? 255 : 0; // square wave
+        out.put((char)value);
+    }
+
+    out.close();
+    cout << "Output done \n";
+    return 0;
+}
 
     
