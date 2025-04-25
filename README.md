@@ -1,8 +1,8 @@
 # Synth-ADV-TPS--Yao
 update 4/25:
 Audio is made up of samples played back quickly—44,100 per second
-- This means the audio will contain 44100 samples for every 1 second of audio.
-For each sample i, convert its index into a time value t in seconds.
+- audio will contain 44100 samples for every second of audio
+- every each sample i, convert its index into a time value t in seconds.
 - example:
   - i = 0 , t=0
   - i= 44100 t = 1.0 sec
@@ -13,7 +13,7 @@ calculates the value of a sine wave at specific point in time
 - sin() -sine function
 - oscillates between -1 and 1
 - 2 * M_PI converts frequency into angular frequency
-- makessine wave complete a full cycle (2π radians) every 1/frequency seconds.
+- makes sine wave complete a full cycle (2π radians) every 1/frequency seconds.
 - 2 * M_PI * FREQUENCY * t gives angle (in radians) at time t
   If sine positive output 255, max voltage on DAC
   if sinenegative output 0, min voltage
