@@ -1,7 +1,9 @@
 # Synth-ADV-TPS--Yao
 update 4/25:
+const int SAMPLE_RATE = 44100;
 Audio is made up of samples played back quickly—44,100 per second
 - audio will contain 44100 samples for every second of audio
+- float t = (float)i /sample_rate;
 - every each sample i, convert its index into a time value t in seconds.
 - example:
   - i = 0 , t=0
