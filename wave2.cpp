@@ -17,20 +17,4 @@ int main() {
 
     const float samples_per_cycle = SAMPLE_RATE / FREQUENCY;
 
-    while (true) {
-        for (int i = 0; i < samples_per_cycle; i++) {
-            float phase = (float)i / samples_per_cycle;
-
-            // Square wave: high for half cycle, low for half
-            uint8_t value = (phase < 0.5) ? 255 : 0;
-
-            // Output to GPIOs
-            gpio_put_masked(0xFF, value);  // 0xFF mask for GPIO 0–7
-
-            // Wait 1/sample_rate seconds
-            sleep_us(1000000 / SAMPLE_RATE);
-        }
-    }
-
-    return 0;
-}
+    
