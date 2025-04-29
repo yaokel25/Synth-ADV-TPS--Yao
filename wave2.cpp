@@ -1,5 +1,6 @@
-#include "pico/stdlib.h"
+#include <stdlib.h>
 #include <math.h>
+#include <pciprop.h>
 
 #define SAMPLE_RATE 8000        // 8 kHz (playable, but not too fast for delays)
 #define FREQUENCY 440           // A4 note
