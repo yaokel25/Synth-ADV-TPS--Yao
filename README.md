@@ -24,5 +24,13 @@ calculates the value of a sine wave at specific point in time
 
 TODO: make compatible with rasbpi with library? add other waves like sine waves
 
+4/29:
+built R-2R DAC, started writing code to connect previous square wave generator to pico
+
+5/01:
+finished code for square wave to connect to pico
+explored arduino IDE options to connect to pico, did not work
+downloaded SDK in VSCode 
+
 
 
